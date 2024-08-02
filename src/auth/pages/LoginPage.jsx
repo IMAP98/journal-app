@@ -8,16 +8,18 @@ import { useForm } from "../../hooks/useForm";
 import { useMemo } from "react";
 
 
+const formData = {
+    email: 'ignacio.moises.ap@correo.com',
+    password: 'pass123'
+}
+
 export const LoginPage = () => {
 
     const dispatch = useDispatch();
     
     const { status, errorMessage } = useSelector(state => state.auth);
 
-    const { email, password, onInputChange } = useForm({
-        email: 'ignacio.moises.arteaga.pelcast@correo.com',
-        password: 'pass123'
-    });
+    const { email, password, onInputChange } = useForm(formData);
 
     const isAuthenticating = useMemo(() => status === 'checking', [status]);
 
