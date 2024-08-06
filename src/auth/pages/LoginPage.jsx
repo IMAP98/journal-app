@@ -9,8 +9,8 @@ import { useMemo } from "react";
 
 
 const formData = {
-    email: 'ignacio.moises.ap@correo.com',
-    password: 'pass123'
+    email: '',
+    password: ''
 }
 
 export const LoginPage = () => {
